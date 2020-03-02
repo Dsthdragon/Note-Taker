@@ -1,0 +1,29 @@
+﻿<Window x:Class="start_up.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:start_up"
+        mc:Ignorable="d"
+        Title="About Start Up" Height="350" Width="300">
+    <StackPanel >
+        <TextBlock HorizontalAlignment="Center" FontSize="40" Margin="20,20,20,0" FontWeight="Bold">
+            Start Up
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" FontSize="20" Margin="10" FontWeight="Bold">
+            1.0.0
+        </TextBlock>
+        <TextBlock FontSize="20" HorizontalAlignment="Center">
+            This is a start up app
+        </TextBlock>
+        <TextBlock FontSize="15" HorizontalAlignment="Center" Margin="10">
+            Copyright © 2020
+        </TextBlock>
+        <TextBlock FontSize="20" HorizontalAlignment="Center">
+            Arinze Aguolu
+        </TextBlock>
+        <Button HorizontalAlignment="Center" Padding="30,5" Margin="10" Click="Button_Click">
+            Close
+        </Button>
+    </StackPanel>
+</Window>

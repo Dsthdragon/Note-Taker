@@ -1,0 +1,41 @@
+﻿<Window x:Class="start_up.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:start_up"
+        xmlns:pages="clr-namespace:start_up.Pages"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Name="mainMenu" >
+            <MenuItem Padding="10" Header="File">
+                <MenuItem Header="New" Name="NewNote" Click="NewNote_Click" />
+            </MenuItem>
+            <MenuItem Padding="10" Click="Open_About_Dialog">
+                <MenuItem.Header>
+                    About
+                </MenuItem.Header>
+            </MenuItem>
+        </Menu>
+        <Grid DockPanel.Dock="Left" Width="250">
+            <ListView  Name="SideBar" Width="250">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel PreviewMouseUp="StackPanel_PreviewMouseUp" Width="200">
+                            <TextBlock Height="30" TextWrapping="NoWrap" TextTrimming="WordEllipsis"  FontSize="20" Text="{Binding Content}" ></TextBlock>
+                            <Label x:Name="date" FontSize="10" HorizontalAlignment="Right" Content="{Binding Created}" ></Label>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        
+        <Grid>
+            <Frame>
+                <Frame.Content>
+                    <pages:StartUp x:Name="StartUpPage" />
+                </Frame.Content>
+            </Frame>
+        </Grid>
+    </DockPanel>
+</Window>
