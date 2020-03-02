@@ -1,0 +1,21 @@
+###
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#	Simple Note taking app built with WPF C# and sqlite Db
+#
+#
+#
+#
+#
+#
+#
+#
+#
+###
